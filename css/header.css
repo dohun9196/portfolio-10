@@ -1,0 +1,197 @@
+/* 스크롤시 헤더 변화 시작 */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: transparent;
+    z-index: 999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: 0.4s;
+}
+
+#header .h_c {
+    display: none;
+}
+
+#header .h_w {
+    display: inline;
+}
+
+#header.top {
+    background: #fff;
+}
+
+#header.top .h_c {
+    display: inline;
+
+    line-height: 90px;
+}
+
+#header.top .h_w {
+    display: none;
+}
+
+#header.on {
+    background: #fff;
+}
+
+#header.on .h_c {
+    display: inline;
+    line-height: 90px;
+}
+
+#header.on .h_w {
+    display: none;
+}
+
+#header .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header h1 {
+    line-height: 90px;
+}
+
+#header h1 a {
+    display: block;
+}
+
+#header .gnb {
+    line-height: 90px;
+}
+
+#header .gnb>ul {
+    display: flex;
+    gap: 60px;
+}
+
+#header .gnb>ul>li>a {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+
+    letter-spacing: 1.5px;
+    transition: 0.4s;
+}
+
+#header.on .gnb>ul>li>a,
+#header.top .gnb>ul>li>a {
+    color: #333;
+}
+
+#header .gnb>ul>li>a:hover {
+    color: #0078c2;
+}
+
+#header .gnb>ul>li .menu_wrap {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    line-height: 50px;
+    height: 0px;
+    background: #fafafa;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #f9f9f9;
+    transition: 0.5s;
+    display: none;
+}
+
+#header .gnb>ul>li:hover .menu_wrap {
+    display: block;
+    top: 90px;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.drop_menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 520px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+#header .login i {
+    font-size: 25px;
+    font-weight: 300;
+    transform: 0.7s;
+    line-height: 90px;
+}
+
+#header .login i:hover {
+    color: #8a7854;
+}
+
+.h_bar {
+    line-height: 90px;
+    padding: 0 0 0 20px;
+}
+
+.h_bar a {
+    display: block;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+#header .h_bar .hd_login {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    line-height: 50px;
+    height: 0px;
+    background: #fafafa;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #f9f9f9;
+
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#header .h_bar:hover .hd_login {
+    display: block;
+    top: 90px;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+}
+
+#header .h_bar .hd_login .flex_inner {
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#header .h_bar .hd_login li {
+    line-height: 90px;
+    text-align: right;
+    border: none;
+}
+
+#header .h_bar .hd_login li a {
+    display: block;
+    color: #555;
+    font-size: 19px;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+#header .h_bar .hd_login li a:hover {
+    color: #8a7854;
+}

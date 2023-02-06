@@ -1,0 +1,133 @@
+#footer {
+    background: #222;
+    color: #ddd;
+    font-size: 14px;
+}
+
+#footer .top {
+    border-bottom: 1px solid #727272;
+    padding: 30px 0;
+}
+
+#footer .top .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .top .inner ul {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#footer .top .inner ul>li>a {
+    display: block;
+}
+
+
+.family>ul>li {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+.f_content {
+    padding: 50px 0;
+}
+
+.f_content .inner .left_logo {
+    float: left;
+    margin: 0 30px 0 0;
+}
+
+.f_content .inner::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.f_content .right {
+    display: inline-block;
+    margin: 0 0 15px 0;
+}
+
+.f_content .right .add {
+    padding: 5px 0;
+}
+
+.f_content .right .add strong {
+    display: inline-block;
+}
+
+.f_content .right .add span {
+    display: inline-block;
+    color: #888;
+}
+
+.f_content .right .add strong:first-child {
+    margin: 0 50px 0 0;
+}
+
+.f_content .right .add strong:nth-child(3),
+.f_content .right .add strong:nth-child(5) {
+    margin: 0 20px 0 0;
+}
+
+.f_content .right .add span:nth-child(2),
+.f_content .right .add span:nth-child(4),
+.f_content .right .add span:nth-child(6) {
+    margin: 0 10px 0 0;
+}
+
+.f_content .right .add strong.lether {
+    margin: 0 42px 0 0;
+}
+
+.f_content .right .add.last strong:first-child {
+    margin: 0 88px 0 0;
+}
+
+.copy {
+    font-weight: 100;
+    color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+/* 상단위치 이동 버튼 */
+
+#top_btn_my {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#top_btn_my a {
+    display: block;
+    font-size: 0;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#top_btn_my img {
+    transition: 0.4s;
+}
+
+#top_btn_my a:hover img {
+    transform: scale(1.1);
+}
+
+#top_btn_my a.on {
+    visibility: visible;
+    opacity: 1;
+}
