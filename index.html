@@ -17,9 +17,11 @@
     <link rel="stylesheet" href="./css/footer.css">
 
     <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/main.js"></script>
+
 </head>
 
 <body>
@@ -98,7 +100,7 @@
         </header>
 
         <main>
-            <section class="mainVisual">
+            <section id="main_section01" class="mainVisual" data-section-name="first">
                 <div class="visual_slide01">
                     <div class="main_itm m_itm01">
                         <div class="visual_txt">
@@ -135,7 +137,7 @@
                     </div>
                 </div>
             </section>
-            <section class="mainContent01 sec">
+            <section id="main_section02" class="mainContent01 sec" data-section-name="second">
                 <div class="inner">
                     <div class="m_cont_tit">
                         <h2>사업분야</h2>
@@ -178,7 +180,7 @@
                     </div>
                 </div>
             </section>
-            <section class="mainContent02 sec">
+            <section id="main_section03" class="mainContent02 sec" data-section-name="third">
                 <div class="inner">
                     <div class="m_cont_tit">
                         <h2>주요 사업실적</h2>
@@ -258,11 +260,53 @@
                             </div>
                         </div>
                     </div>
+                    <div class="view">
+                        <a href="">View more</a>
+                    </div>
                 </div>
             </section>
+            <section id="main_section04" class="mainContent03 sec" data-section-name="fourth">
+                <div class="inner">
+                    <div class="m_cont_tit">
+                        <h2>Sales<br>
+                            Information</h2>
+                        <p>미래를 내다보는 동원의 건설 과학으로<br>
+                            21세기 첨단 건축 문화가 한걸음 가까워집니다.</p>
+                    </div>
+                    <div class="content03_itm">
+                        <a href="http://xn--9w3b97b52b1g23iu0iw5n.com/" target="_blank">
+                            <div class="con03_img">
+                                <img src="./img/m_sales01.jpeg" alt="">
+                                <div class="con03_over">
+                                    <span>분양중</span>
+                                </div>
+                                <div class="content03_bottom_text">
+                                    <h3>신안산 비즈스타</h3>
+                                    <p>(홍보관) 경기도 안산시 단원구 원시동 768-5번지</p>
+                                    <strong>1644-0226</strong>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="http://www.arcentower.com" target="_blank">
+                            <div class="con03_img">
+                                <img src="./img/m_sales02.jpeg" alt="">
+                                <div class="con03_over">
+                                    <span>분양중</span>
+                                </div>
+                                <div class="content03_bottom_text">
+                                    <h3>가산 YPP아르센타워</h3>
+                                    <p>(홍보관) 서울시 금천구 디지털로 121, 에이스 가산타워 108호</p>
+                                    <strong>02)6949-3949</strong>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
-        <footer id="footer">
+        <footer id="footer" class="footer">
             <div class="top">
                 <div class="inner">
                     <ul>
@@ -309,7 +353,17 @@
                 <img src="./img/sc-top.png" alt="">
             </a>
         </div>
+        <div class="main_side_nav">
+            <ul class="page_nav">
+                <li><a href="#main_section01" class="on">main</a></li>
+                <li><a href="#main_section02">사업분야</a></li>
+                <li><a href="#main_section03">주요사업</a></li>
+                <li class="p_w"><a href="#main_section04">Sales</a></li>
+            </ul>
+
+        </div>
     </div>
+
 </body>
 
 </html>

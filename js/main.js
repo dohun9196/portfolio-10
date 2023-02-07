@@ -1,4 +1,6 @@
 $(function () {
+
+
     // 메인페이지
     $('.visual_slide01').slick({
         dots: false,
@@ -50,8 +52,32 @@ $(function () {
         } else if (height < 950) {
             $('#top_btn_my a').removeClass('on');
         }
+    });
+
+
+    $('.main_side_nav a').click(function () {
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 700);
+        return false;
+    });
+
+
+    $.scrollify({
+        interstitialSection: "#main_section01, #main_section02, #main_section03, #main_section04,#footer",
+        scrollSpeed: 700,
+        scrollbars: true,
 
     });
+    $('.page_nav li a').on('click', function () {
+        $('.on').removeClass('on');
+        $(this).addClass('on');
+    })
+    $('.p_w a').on('click', function () {
+        $('.on').removeClass('on');
+        $('.main_side_nav').addClass('on');
+    })
+
 
 });
 
