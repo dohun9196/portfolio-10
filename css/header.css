@@ -1,5 +1,3 @@
-/* 스크롤시 헤더 변화 시작 */
-
 #header {
     position: fixed;
     top: 0;
@@ -20,32 +18,6 @@
     display: inline;
 }
 
-#header.top {
-    background: #fff;
-}
-
-#header.top .h_c {
-    display: inline;
-
-    line-height: 90px;
-}
-
-#header.top .h_w {
-    display: none;
-}
-
-#header.on {
-    background: #fff;
-}
-
-#header.on .h_c {
-    display: inline;
-    line-height: 90px;
-}
-
-#header.on .h_w {
-    display: none;
-}
 
 #header .inner {
     display: flex;
@@ -96,8 +68,8 @@
     line-height: 50px;
     height: 0px;
     background: #fafafa;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #f9f9f9;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
     transition: 0.5s;
     display: none;
 }
@@ -120,78 +92,68 @@
 
 
 
-
-
-
-#header .login i {
-    font-size: 25px;
-    font-weight: 300;
-    transform: 0.7s;
-    line-height: 90px;
+/* .on */
+#header.on {
+    background: #fff;
+    height: 70px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-#header .login i:hover {
-    color: #8a7854;
+#header.on .h_c {
+    display: inline-block;
+    line-height: 70px;
 }
 
-.h_bar {
-    line-height: 90px;
-    padding: 0 0 0 20px;
+#header.on .h_w {
+    display: none;
 }
 
-.h_bar a {
-    display: block;
-    font-size: 19px;
-    font-weight: 700;
+#header.on .inner {}
+
+#header.on h1 {
+    line-height: 70px;
+
 }
 
-#header .h_bar .hd_login {
+#header.on .gnb {
+    line-height: 70px;
+}
+
+#header.on .gnb>ul>li .menu_wrap {
     position: absolute;
-    top: 90px;
+    top: 0px;
     left: 0;
     right: 0;
     line-height: 50px;
     height: 0px;
     background: #fafafa;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #f9f9f9;
-
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
     transition: 0.5s;
-    visibility: hidden;
-    opacity: 0;
+    display: none;
 }
 
-#header .h_bar:hover .hd_login {
+#header.on .gnb>ul>li:hover .menu_wrap {
     display: block;
-    top: 90px;
+    top: 70px;
     left: 0;
-
-    width: 100%;
-    height: 90px;
-    visibility: visible;
-    opacity: 1;
-    z-index: 999;
+    right: 0;
+    height: 50px;
 }
 
-#header .h_bar .hd_login .flex_inner {
-    justify-content: flex-end;
-    gap: 10px;
+
+/* .top */
+
+#header.top {
+    background: #fff;
 }
 
-#header .h_bar .hd_login li {
+#header.top .h_c {
+    display: inline-block;
+
     line-height: 90px;
-    text-align: right;
-    border: none;
 }
 
-#header .h_bar .hd_login li a {
-    display: block;
-    color: #555;
-    font-size: 19px;
-    font-weight: 500;
-    transition: 0.4s;
-}
-
-#header .h_bar .hd_login li a:hover {
-    color: #8a7854;
+#header.top .h_w {
+    display: none;
 }
