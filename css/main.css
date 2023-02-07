@@ -4,9 +4,14 @@ body {
 
 section {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
 }
 
 .mainVisual {
+
     position: relative;
 }
 
@@ -370,12 +375,20 @@ section {
 }
 
 .mainContent03 .inner .m_cont_tit {
-    padding: 130px 0;
+    padding: 200px 0;
     float: left;
     text-align: left;
     color: #fff;
-    line-height: 1.3;
+
     margin-bottom: 0;
+}
+
+.mainContent03 .inner .m_cont_tit h2 {
+    font-size: 50px;
+}
+
+.mainContent03 .inner .m_cont_tit p {
+    line-height: 1.5;
 }
 
 .mainContent03 .inner .content03_itm {
@@ -392,7 +405,7 @@ section {
 }
 
 .mainContent03 .inner .content03_itm img {
-    height: 320px;
+    height: 400px;
 }
 
 .mainContent03 .inner .content03_itm .con03_img {
@@ -459,16 +472,12 @@ section {
     cursor: pointer;
 }
 
-/* .main_side_nav .page_nav li:last-child {
-    margin: 0;
-} */
-
 .main_side_nav .page_nav li:hover a {
     visibility: visible;
     opacity: 1;
 }
 
-.main_side_nav .page_nav a {
+.main_side_nav .page_nav li a {
     display: block;
     color: #fff;
     padding: 0 0 0 10px;
@@ -477,15 +486,14 @@ section {
     transition: 0.7s;
 }
 
-.main_side_nav .page_nav a.on {
+.main_side_nav .page_nav li a.on {
     display: block;
     color: #fff;
     visibility: visible;
     opacity: 1;
 }
 
-
-.main_side_nav li::before {
+.main_side_nav .page_nav>li::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -499,9 +507,81 @@ section {
     visibility: hidden;
     opacity: 0;
     transition: 0.7s;
+    pointer-events: none;
 }
 
-.main_side_nav li:hover::before {
+.main_side_nav .page_nav>li:hover::before {
+    width: 20px;
+    height: 20px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.main_side_nav .page_nav>li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -17.5px;
+    transform: translate(0, -50%);
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* 스크롤 변화시 side nav */
+.main_side_nav.on .page_nav>li>a {
+    display: block;
+    color: #333;
+    padding: 0 0 0 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.page_nav>li>a.active {
+    display: block;
+    color: #333;
+    font-weight: 500;
+    padding: 0 0 0 20px;
+
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.main_side_nav.on .page_nav>li>a.on {
+    display: block;
+    color: #333;
+    visibility: visible;
+    opacity: 1;
+}
+
+.main_side_nav.on .page_nav>li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translate(0, -50%);
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 1px solid#333;
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.main_side_nav.on .page_nav>li.active::before {
+    width: 20px;
+    height: 20px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.main_side_nav.on .page_nav>li:hover::before {
     width: 20px;
     height: 20px;
     visibility: visible;
@@ -509,14 +589,24 @@ section {
 
 }
 
-.main_side_nav li::after {
+.main_side_nav.on .page_nav>li::after {
     content: "";
     position: absolute;
     top: 50%;
-    left: -20px;
+    left: -17.5px;
     transform: translate(0, -50%);
-    width: 10px;
-    height: 10px;
-    background: #fff;
+    width: 5px;
+    height: 5px;
+    background: #333;
     border-radius: 50%;
+}
+
+.main_side_nav .page_nav>li a.active {
+    display: block;
+    color: #333;
+    font-weight: 500;
+    padding: 0 0 0 20px;
+
+    visibility: visible;
+    opacity: 1;
 }
