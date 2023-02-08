@@ -107,13 +107,16 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: rgba(0, 0, 0, 0.5);
+
 }
 
 #top_btn_my a {
     display: block;
+    background: url(../img/sc-top.png) rgba(0, 0, 0, 0.5) no-repeat center center/20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     font-size: 0;
-
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;

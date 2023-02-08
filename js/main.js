@@ -1,25 +1,32 @@
 $(function () {
 
 
+    $('.visual_slide01').on('init', function () {
+        $('.main_itm').eq(0).addClass('on')
+    })
+
     // 메인페이지
     $('.visual_slide01').slick({
         dots: false,
-        autoplay: false,
+        autoplay: true,
         arrows: false,
         pauseOnHover: false,
         pauseOnFocus: false,
         autoplaySpeed: 4000,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         fade: true,
-        cssEase: 'linear',
+        //cssEase: 'linear',
     });
+
+    $('.visual_slide01').on('afterChange', function (e, s, c) {
+        var c = $('.slick-current');
+        c.addClass('on').siblings().removeClass('on')
+
+    })
 
     // $(".visual_slide01").slick.refresh();
 
-    AOS.init({
-        duration: 1200
-    });
 
     $('#header').hover(function () {
         $('#header').addClass('top');
@@ -43,17 +50,17 @@ $(function () {
 
     $(window).scroll(function () {
         var height = $(document).scrollTop();
-        if (height > 950) {
+        if (height > 900) {
             $('#top_btn_my a').addClass('on');
-        } else if (height < 950) {
+        } else if (height < 900) {
             $('#top_btn_my a').removeClass('on');
         }
     });
 
-    $('.page_nav li a').on('click', function () {
-        $('.page_nav li a').removeClass('on');
-        $(this).addClass('on');
-    })
+    // 스크롤 이벤트 막기(true의 경우 화면 떨림현상 생김)
+    window.addEventListener("wheel", function (e) {
+        e.preventDefault();
+    }, { passive: false });
 
 
     $(window).scroll(function () {
@@ -87,6 +94,7 @@ $(function () {
         } else if (height >= 2808) {
             $('.page_nav li:nth-child(4) a').addClass('active');
             $('.page_nav li:nth-child(4)').addClass('active');
+            $('.main_side_nav').removeClass('on');
 
         }
         else {
@@ -116,10 +124,10 @@ $(function () {
 
     // });
 
-$(document).on("wheel",function(e){
-    console.log(e.originalEvent.deltaY)
-    // Returns a value between -100 and 100 depending on the direction you are scrolling
-});
+    // $(window).on("wheel", function (e) {
+    //     console.log(e.originalEvent.deltaY)
+    //     // Returns a value between -100 and 100 depending on the direction you are scrolling
+    // });
 
     var HTML_SC = $("html");
     var page = 1;
