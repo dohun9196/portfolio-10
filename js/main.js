@@ -76,11 +76,11 @@ $(function () {
     });
     $(window).scroll(function () {
         var height = $(document).scrollTop();
-        if (height == 936) {
+        if (height == 937) {
             $('.page_nav li:nth-child(2) a').addClass('active');
             $('.page_nav li:nth-child(2)').addClass('active');
 
-        } else if (height == 1872) {
+        } else if (height == 1874) {
             $('.page_nav li:nth-child(3) a').addClass('active');
             $('.page_nav li:nth-child(3)').addClass('active');
 
