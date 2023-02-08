@@ -116,7 +116,10 @@ $(function () {
 
     // });
 
-
+$(document).on("wheel",function(e){
+    console.log(e.originalEvent.deltaY)
+    // Returns a value between -100 and 100 depending on the direction you are scrolling
+});
 
     var HTML_SC = $("html");
     var page = 1;
