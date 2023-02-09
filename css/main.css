@@ -309,6 +309,7 @@ html {
     background: transparent;
     font-weight: 300;
     transition: 0.4s;
+    color: #fff;
 }
 
 .mainContent01 .inner .content01_itm .con01_img .content_link a:hover {
@@ -650,6 +651,22 @@ html {
     opacity: 1;
 }
 
+.main_side_nav .page_nav>li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translate(0, -50%);
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 1px solid#fff;
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s;
+}
+
 .main_side_nav.on .page_nav>li::before {
     content: "";
     position: absolute;
@@ -664,6 +681,13 @@ html {
     visibility: hidden;
     opacity: 0;
     transition: 0.7s;
+}
+
+.main_side_nav .page_nav>li.active::before {
+    width: 20px;
+    height: 20px;
+    visibility: visible;
+    opacity: 1;
 }
 
 .main_side_nav.on .page_nav>li.active::before {

@@ -21,9 +21,9 @@ $(function () {
 
     $('.visual_slide01').on('afterChange', function (e, s, c) {
         var c = $('.slick-current');
-        c.addClass('on').siblings().removeClass('on')
+        c.addClass('on').siblings().removeClass('on');
 
-    })
+    });
 
     // $(".visual_slide01").slick.refresh();
 
@@ -50,18 +50,12 @@ $(function () {
 
     $(window).scroll(function () {
         var height = $(document).scrollTop();
-        if (height > 900) {
+        if (height > 700) {
             $('#top_btn_my a').addClass('on');
-        } else if (height < 900) {
+        } else {
             $('#top_btn_my a').removeClass('on');
         }
     });
-
-    // 스크롤 이벤트 막기(true의 경우 화면 떨림현상 생김)
-    window.addEventListener("wheel", function (e) {
-        e.preventDefault();
-    }, { passive: false });
-
 
     $(window).scroll(function () {
         var height = $(document).scrollTop();
@@ -103,19 +97,59 @@ $(function () {
         }
     });
 
+    $(window).scroll(function () {
+
+        var hz1 = $("#main_section01").offset();
+        var hz2 = $("#main_section02").offset();
+        var hz3 = $("#main_section03").offset();
+        var hz4 = $("#main_section04").offset();
+
+        console.log(hz1);
+        console.log(hz2);
+        console.log(hz3);
+        console.log(hz4);
+
+    });
+
+
     $('.main_side_nav a').click(function () {
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 700);
         return false;
     });
-    $('#top_btn_my a').click(function () {
+    $('.last-move').click(function () {
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 700);
         return false;
     });
 
+    $('#top_btn_my a').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+    $('.bus03_nav>li:nth-child(1)>a').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 630
+        }, 700);
+    });
+    $('.bus03_nav>li:nth-child(2)>a').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 1234
+        }, 700);
+    });
+    $('.bus03_nav>li:nth-child(3)>a').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 1733
+        }, 700);
+    });
+    $('.bus03_nav>li:nth-child(4)>a').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 2233
+        }, 700);
+    });
 
     // $.scrollify({
     //     interstitialSection: "#main_section01, #main_section02, #main_section03, #main_section04,#footer",
@@ -129,22 +163,6 @@ $(function () {
     //     // Returns a value between -100 and 100 depending on the direction you are scrolling
     // });
 
-    var HTML_SC = $("html");
-    var page = 1;
 
-
-    HTML_SC.animate({ scrollTop: 0 }, 10);
-    $(window).on("wheel", function (e) {
-        if (HTML_SC.is(":animated")) return;
-        if (e.originalEvent.deltaY > 0) {
-            if (page == 5) return;
-            page++;
-        } else if (e.originalEvent.deltaY < 0) {
-            if (page == 1) return;
-            page--;
-        }
-        var posTop = (page - 1) * $(window).height();
-        HTML_SC.animate({ scrollTop: posTop });
-    })
 
 });

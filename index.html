@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/slick.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -40,15 +39,20 @@
                                     <li><a href="">CEO인사말</a></li>
                                     <li><a href="">회사개요</a></li>
                                     <li><a href="">기업연혁</a></li>
-                                    <li><a href="">조직도</a></li>
-                                    <li><a href="">오시는길</a></li>
+                                    <li><a href="">조직구성</a></li>
+                                    <li><a href="">재무 / 신용정보</a></li>
+                                    <li><a href="">그룹사 소개</a></li>
+                                    <li><a href="">찾아오시는 길</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="#!">투자정보</a>
+                        <li><a href="./doc/business01.html">사업분야</a>
                             <div class="menu_wrap">
                                 <ul class="drop_menu">
-                                    <li><a href="">재무정보</a></li>
+                                    <li><a href="">건축부문</a></li>
+                                    <li><a href="">인프라부문</a></li>
+                                    <li><a href="">부동산자산관리</a></li>
+                                    <li><a href="">연도별 실적</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -64,31 +68,31 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="#!">사업분야</a>
-                            <div class="menu_wrap">
-                                <ul class="drop_menu">
-                                    <li><a href="">건축</a></li>
-                                    <li><a href="">인프라</a></li>
-                                    <li><a href="">부동산</a></li>
-                                    <li><a href="">연도별 실적</a></li>
-                                </ul>
-                            </div>
-                        </li>
                         <li><a href="#!">홍보센터</a>
                             <div class="menu_wrap">
                                 <ul class="drop_menu">
-                                    <li><a href="">동원건설 소식</a></li>
-                                    <li><a href="">CI</a></li>
+                                    <li><a href="">동원건설산업 소식</a></li>
+                                    <li><a href="">CI / BI</a></li>
                                     <li><a href="">홍보영상</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#!">인재채용</a>
+                            <div class="menu_wrap">
+                                <ul class="drop_menu">
+                                    <li><a href="">인사제도</a></li>
+                                    <li><a href="">교육제도</a></li>
+                                    <li><a href="">복지제도</a></li>
+                                    <li><a href="">채용정보</a></li>
 
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="#!">채용정보</a></li>
                         <li><a href="#!">고객센터</a>
                             <div class="menu_wrap">
                                 <ul class="drop_menu">
-                                    <li><a href="">고객문의</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="">문의접수</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -348,7 +352,7 @@
             </div>
         </footer>
         <div id="top_btn_my">
-            <a href="#main_section01">
+            <a href="#!">
                 top
             </a>
         </div>
@@ -359,10 +363,34 @@
                 <li><a href="#main_section03" class="on">주요 사업</a></li>
                 <li><a href="#main_section04" class="on">Information</a></li>
             </ul>
-
         </div>
     </div>
+    <script>
+        // 스크롤 이벤트 막기(true의 경우 화면 떨림현상 생김)
+        window.addEventListener("wheel", function (e) {
+            e.preventDefault();
+        },
+            { passive: false });
 
+
+        var HTML_SC = $("html");
+        var page = 1;
+
+
+        HTML_SC.animate({ scrollTop: 0 }, 10);
+        $(window).on("wheel", function (e) {
+            if (HTML_SC.is(":animated")) return;
+            if (e.originalEvent.deltaY > 0) {
+                if (page == 5) return;
+                page++;
+            } else if (e.originalEvent.deltaY < 0) {
+                if (page == 1) return;
+                page--;
+            }
+            var posTop = (page - 1) * $(window).height();
+            HTML_SC.animate({ scrollTop: posTop });
+        })
+    </script>
 </body>
 
 </html>
