@@ -1,13 +1,13 @@
 <?php
 include_once('../../../common.php');
 $num = 1;
-$title = '브랜드';
+$title = '사업분야';
 $subtitle = '건축부문';
 include_once(G5_THEME_PATH . '/head.php');
 ?>
 
 <?php
-include_once(G5_THEME_PATH . '/doc/business_nav.php');
+include_once(G5_THEME_PATH . '/doc/subpage_nav.php');
 ?>
 
 <section class="sub_business01_01 sec">

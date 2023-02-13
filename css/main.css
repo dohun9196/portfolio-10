@@ -21,10 +21,7 @@ html {
     padding: 170px 0 100px 0;
 }
 
-.mainVisual {
-    position: relative;
-
-}
+.mainVisual {}
 
 
 .mainVisual .visual_slide01 .main_itm {
@@ -273,7 +270,7 @@ html {
     display: block;
     font-size: 30px;
     font-weight: 700;
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
     text-shadow: 0px 0px 1px #ccc;
 }
 

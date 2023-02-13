@@ -83,13 +83,26 @@
 }
 
 .drop_menu {
+    position: absolute;
+    left: 61%;
+    transform: translate(-50%, 0);
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    width: 1200px;
+    justify-content: flex-end;
+    gap: 40px;
+    width: 780px;
     margin: 0 auto;
 }
 
+.drop_menu>li>a:hover {
+    color: #0078c2;
+}
+
+
+#header .gnb>ul>li:nth-child(2) .menu_wrap .drop_menu {
+
+    justify-content: center;
+
+}
 
 
 /* .on */
@@ -116,6 +129,7 @@
 }
 
 #header.on .gnb {
+
     line-height: 70px;
 }
 

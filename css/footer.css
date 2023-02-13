@@ -1,4 +1,5 @@
 #footer {
+    position: relative;
     font-family: 'Roboto', 'Noto Sans KR', sans-serif;
     background: #222;
     color: #ddd;
@@ -15,23 +16,91 @@
     justify-content: space-between;
 }
 
-#footer .top .inner ul {
+#footer .top .inner>ul {
     display: flex;
     gap: 30px;
     justify-content: flex-start;
     align-items: center;
 }
 
-#footer .top .inner ul>li>a {
+#footer .top .inner>ul>li>a {
     display: block;
     color: #ddd;
 }
 
 
-.family>ul>li {
+.family_site .fmaily_site_cli {
+    color: #ddd;
     border: 1px solid #ddd;
     padding: 10px 20px;
 }
+
+.family_site .fmaily_site_cli>a {
+    color: #ddd;
+}
+
+.family_site .fmaily_site_cli>a i {
+    font-size: 25px;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+
+.family_site .fmaily_site_cli>a.on i {
+    transform: rotate(180deg);
+}
+
+.family_site .family_open {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #f9f9f9;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.family_site .family_open.on {
+    display: block;
+    top: -250px;
+    height: 250px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.family_site .family_open>ul {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 0 0;
+}
+
+.family_site .family_open>ul>li {
+    display: block;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+.family_site .family_open>ul>li .f_list_head {
+    display: block;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+.family_list_desc>li>a {
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 10px 0;
+}
+
 
 .f_content {
     padding: 50px 0;

@@ -1,14 +1,14 @@
 <ul>
-    <li><a href="#!">회사소개</a>
+    <li><a href="<?php echo G5_THEME_URL ?>/doc/company01.php">회사소개</a>
         <div class="menu_wrap">
             <ul class="drop_menu">
-                <li><a href="">CEO인사말</a></li>
-                <li><a href="">회사개요</a></li>
-                <li><a href="">기업연혁</a></li>
-                <li><a href="">조직구성</a></li>
-                <li><a href="">재무 / 신용정보</a></li>
-                <li><a href="">그룹사 소개</a></li>
-                <li><a href="">찾아오시는 길</a></li>
+                <li><a href="<?php echo G5_THEME_URL ?>/doc/company01.php">CEO인사말</a></li>
+                <li><a href="#!">회사개요</a></li>
+                <li><a href="#!">기업연혁</a></li>
+                <li><a href="#!">조직구성</a></li>
+                <li><a href="#!">재무 / 신용정보</a></li>
+                <li><a href="#!">그룹사 소개</a></li>
+                <li><a href="#!">찾아오시는 길</a></li>
             </ul>
         </div>
     </li>

@@ -320,10 +320,54 @@
                         <li><a href="#!">정도경영신고센터</a></li>
                         <li><a href="#!">이메일무단수집거부</a></li>
                     </ul>
-                    <div class="family">
-                        <ul>
-                            <li>Family Site <i class="xi-angle-up-min"></i></li>
-                        </ul>
+                    <div class="family_site">
+                        <span class="fmaily_site_cli"><a href="#!"> Family Site <i
+                                    class="xi-angle-up-min"></i></a></span>
+                        <div class="family_open">
+                            <ul class="family_list">
+                                <li><span class="f_list_head">동원그룹</span>
+                                    <ul class="family_list_desc">
+                                        <li><a href="" target="_blank">미디어 동원</a></li>
+                                    </ul>
+                                </li>
+                                <li><span class="f_list_head">해양&nbsp;&middot;&nbsp;물류</span>
+                                    <ul class="family_list_desc">
+                                        <li><a href="" target="_blank">동원산업</a></li>
+                                        <li><a href="" target="_blank">동원로엑스</a></li>
+                                        <li><a href="" target="_blank">BIDC</a></li>
+                                        <li><a href="" target="_blank">동원로엑스냉장</a></li>
+                                    </ul>
+                                </li>
+                                <li><span class="f_list_head">식품가공&nbsp;&middot;&nbsp;유통</span>
+                                    <ul class="family_list_desc">
+                                        <li><a href="" target="_blank">동원F&B</a></li>
+                                        <li><a href="" target="_blank">동원디어푸드</a></li>
+                                        <li><a href="" target="_blank">동원홈푸드</a></li>
+                                        <li><a href="" target="_blank">동원팜스</a></li>
+                                    </ul>
+                                </li>
+                                <li><span class="f_list_head">생활서비스</span>
+                                    <ul class="family_list_desc">
+                                        <li><a href="" target="_blank">동원시스템즈</a></li>
+                                        <li><a href="" target="_blank">동원CNS</a></li>
+                                        <li><a href="" target="_blank">동원기술투자</a></li>
+                                    </ul>
+                                </li>
+                                <li><span class="f_list_head">인재&nbsp;&middot;&nbsp;사회활동</span>
+                                    <ul class="family_list_desc">
+                                        <li><a href="" target="_blank">동원육영재단</a></li>
+                                        <li><a href="" target="_blank">동원리더스아카데미</a></li>
+                                    </ul>
+                                </li>
+                                <li><span class="f_list_head">글로벌</span>
+                                    <ul class="family_list_desc">
+                                        <li><a href="" target="_blank">StarKist</a></li>
+                                        <li><a href="" target="_blank">S.C.A SA</a></li>
+                                        <li><a href="" target="_blank">TTP</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -390,6 +434,41 @@
             var posTop = (page - 1) * $(window).height();
             HTML_SC.animate({ scrollTop: posTop });
         })
+
+        $(window).scroll(function () {
+            var height = $(document).scrollTop();
+            var hz1 = $("#main_section01").offset().top;
+            var hz2 = $("#main_section02").offset().top;
+            var hz3 = $("#main_section03").offset().top;
+            var hz4 = $("#main_section04").offset().top;
+            $('.main_side_nav').addClass('on');
+            if (height == hz1) {
+                $('.page_nav li:nth-child(1) a').addClass('active');
+                $('.page_nav li:nth-child(1)').addClass('active');
+                $('.main_side_nav').removeClass('on');
+            } else if (height == hz2) {
+                $('.page_nav li:nth-child(2) a').addClass('active');
+                $('.page_nav li:nth-child(2)').addClass('active');
+                $('.main_side_nav').addClass('on');
+            } else if (height == hz3) {
+                $('.page_nav li:nth-child(3) a').addClass('active');
+                $('.page_nav li:nth-child(3)').addClass('active');
+                $('.main_side_nav').addClass('on');
+            }
+            else if (height == hz4) {
+                $('.page_nav li:nth-child(4) a').addClass('active');
+                $('.page_nav li:nth-child(4)').addClass('active');
+                $('.main_side_nav').removeClass('on');
+            }
+            else {
+                $('.page_nav li a').removeClass('active');
+                $('.page_nav li').removeClass('active');
+                $('.main_side_nav').removeClass('on');
+            }
+        });
+
+
+
     </script>
 </body>
 
